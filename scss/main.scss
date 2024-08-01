@@ -1,7 +1,13 @@
-body {
-  background-color: red($color: #000000);
-
-  h1 {
-    color: rgb(2, 41, 41);
-  }
+@import "header";
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+.wrapper {
+  max-width: 1440px;
+  overflow: hidden;
+  margin: 0 auto;
+  background-color: #e1d4c9;
+  padding: 20px 40px;
 }
