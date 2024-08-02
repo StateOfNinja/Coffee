@@ -1,0 +1,26 @@
+.application {
+  display: flex;
+  align-items: center;
+  margin-bottom: 100px;
+  .application__offer {
+    width: 630px;
+    margin-right: 100px;
+  }
+  h1 {
+    font-size: 60px;
+    font-weight: 600;
+    line-height: 75px;
+    color: #403f3d;
+    span {
+      color: #b0907a;
+    }
+  }
+  p {
+    margin: 40px 0;
+    color: #403f3d;
+    font-size: 16px;
+  }
+  .iphone {
+    margin-right: 20px;
+  }
+}
