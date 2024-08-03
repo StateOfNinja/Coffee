@@ -1,0 +1,56 @@
+.main {
+  margin-bottom: 100px;
+  .tagline__container {
+    margin: 0 auto;
+    width: 800px;
+
+    h1 {
+      text-align: center;
+      color: #403f3d;
+      font-size: 60px;
+      line-height: 75px;
+      font-weight: 600;
+      span {
+        font-style: italic;
+        color: #b0907a;
+      }
+    }
+  }
+  .tabs__container {
+    display: flex;
+    justify-content: center;
+    margin: 40px 0;
+    .tab:nth-child(2) {
+      margin: 0 16px;
+    }
+  }
+  .coffee__items {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+  }
+  .item__description {
+    margin: 20px;
+  }
+  .item__box {
+    height: 506px;
+    border: 1px solid;
+    color: #c1b6ad;
+    border-radius: 40px;
+    img {
+      border-radius: 40px;
+    }
+    h1 {
+      color: #403f3d;
+      line-height: 30px;
+      font-size: 24px;
+    }
+    p {
+      color: #403f3d;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 24px;
+      margin: 12px 0;
+    }
+  }
+}
