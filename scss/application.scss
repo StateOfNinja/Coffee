@@ -2,25 +2,71 @@
   display: flex;
   align-items: center;
   margin-bottom: 100px;
-  .application__offer {
-    width: 630px;
-    margin-right: 100px;
+}
+.application__download {
+  margin: 0 100px 0 0;
+}
+.application-download__title {
+  font-size: 60px;
+  font-weight: 600;
+  line-height: 75px;
+  color: #403f3d;
+  span {
+    color: #b0907a;
   }
-  h1 {
-    font-size: 60px;
-    font-weight: 600;
-    line-height: 75px;
-    color: #403f3d;
-    span {
-      color: #b0907a;
-    }
+}
+.application-download__text {
+  margin: 40px 0;
+  color: #403f3d;
+  font-size: 16px;
+}
+.application-download__btn {
+  display: flex;
+}
+.download__btn {
+  width: 200px;
+  height: 64px;
+  border: 1px solid #665f55;
+  border-radius: 100px;
+  padding: 12px 20px;
+  transition: all 0.3s ease-in 0s;
+  background-color: #e1d4c9;
+  cursor: pointer;
+  &::before {
+    background-repeat: no-repeat;
+    content: "";
+    width: 36px;
+    height: 36px;
+    position: absolute;
+    top: 20%;
+    left: 20px;
   }
-  p {
-    margin: 40px 0;
-    color: #403f3d;
-    font-size: 16px;
+}
+.download-btn__apple {
+  margin-right: 20px;
+  position: relative;
+  &::before {
+    background-image: url(/src/icon/Icon.svg);
   }
-  .iphone {
-    margin-right: 20px;
+}
+.download-btn__google {
+  position: relative;
+  &::before {
+    background-image: url(/src/icon/google.svg);
   }
+}
+.download-btn__text {
+  padding-left: 44px;
+  text-align: left;
+}
+.btn__label {
+  font-size: 10px;
+  font-weight: 600;
+  line-height: 14px;
+  color: #403f3d;
+}
+.btn__store {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
 }

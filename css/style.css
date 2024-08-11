@@ -1,5 +1,25 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Forum&display=swap");
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Inter";
+}
+
+.wrapper {
+  max-width: 1440px;
+  overflow: hidden;
+  margin: 0 auto;
+  background-color: #e1d4c9;
+  padding: 20px 40px 40px;
+}
+
 .header {
   margin-bottom: 100px;
+}
+.header .header__logo {
+  z-index: 1;
 }
 
 .header__conrainer {
@@ -14,42 +34,98 @@
   list-style: none;
 }
 .sections__list a {
-  font-family: "Roboto", sans-serif;
   font-weight: 600;
   margin-right: 40px;
   color: #403f3d;
   text-decoration: none;
 }
 
+.burger__menu {
+  z-index: 1000;
+  display: none;
+  width: 100%;
+  overflow: hidden;
+  background-color: #e1d4c9;
+  transition: left 0.3s ease;
+  padding: 60px 40px 384px 40px;
+}
+
+.burger__menu--active {
+  left: 0;
+  display: block;
+  transition: left 0.3s ease;
+}
+
+.burger-menu__sections {
+  text-align: center;
+}
+
+.sections-list__link {
+  list-style: none;
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 40px;
+  margin-bottom: 60px;
+}
+
+.burger-menu__menu {
+  position: relative;
+  margin-top: 100px;
+  text-align: center;
+}
+.burger-menu__menu a {
+  line-height: 40px;
+  font-size: 32px;
+  font-weight: 600;
+  color: #403f3d;
+}
+.burger-menu__menu a::after {
+  content: url(/src/icon/coffee-cupBig.svg);
+  position: relative;
+  top: 5px;
+  left: 15px;
+  width: 40px;
+  height: 40px;
+}
+
 .header__menu {
-  display: flex;
-  align-items: center;
+  position: relative;
 }
 .header__menu a {
-  font-family: "Roboto", sans-serif;
   font-weight: 600;
   text-decoration: none;
   color: #403f3d;
+  margin-right: 18px;
 }
-.header__menu img {
-  margin-left: 8px;
+.header__menu a::after {
+  content: url(/src/icon/coffee-cup.svg);
+  position: absolute;
+  height: 20px;
+  bottom: 2px;
+  margin-left: 5px;
+}
+
+.link {
+  color: #403f3d;
+  text-decoration: none;
 }
 
 .header__content {
+  background-position: center;
+  background-size: cover;
+  border-radius: 40px;
   padding: 100px;
   background-image: url(/src/img/53de184b52e70f8c6142237a41f29303.jpg);
-  border-radius: 40px;
 }
 
-.content__offer {
-  width: 530px;
+.header-content__offer {
+  max-width: 530px;
 }
 
 .offer__title {
   font-size: 72px;
   line-height: 76px;
   font-weight: 600;
-  font-family: "Roboto", sans-serif;
   color: #e1d4c9;
   padding-bottom: 40px;
 }
@@ -59,24 +135,27 @@
 }
 
 .offer__text {
-  font-family: "Roboto", sans-serif;
   font-size: 16px;
   line-height: 24px;
   color: #e1d4c9;
   padding-bottom: 40px;
 }
 
-.offter__btn {
+.offer__btn {
   line-height: 24px;
   font-size: 16px;
   font-weight: 600;
-  font-family: "Roboto", sans-serif;
+  padding: 20px 78px;
   background-color: #e1d4c9;
-  min-width: 200px;
+  width: 200px;
   color: #403f3d;
   border-radius: 100px;
   height: 64px;
   border: 1px #e1d4c9 solid;
+}
+
+.header__burger {
+  display: none;
 }
 
 .favorite {
@@ -85,53 +164,62 @@
   margin-bottom: 100px;
 }
 
-.favorite__slider {
+.favorite__title {
   font-size: 60px;
   line-height: 75px;
   font-weight: 600;
-  font-family: "Roboto", sans-serif;
+  margin-bottom: 40px;
   color: #403f3d;
 }
-.favorite__slider span {
+.favorite__title span {
   color: #b0907a;
 }
-.favorite__slider .slider__item {
-  width: 480px;
-  height: 480px;
+
+.slider__item {
+  max-width: 480px;
 }
 
-.slider__switches .prev,
-.slider__switches .next {
-  top: 40%;
+.slider-switches__btn {
+  padding: 18px;
+  background-color: #e1d4c9;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  outline: none;
+  border: 1px solid #403f3d;
+  cursor: pointer;
+  top: 50%;
   position: absolute;
 }
-.slider__switches .prev {
+
+.switches-btn__prev {
   left: 0;
 }
-.slider__switches .next {
+
+.switches-btn__next {
   right: 0;
 }
 
-.items__description {
+.slider-item__description {
   margin: 0 auto;
-  width: 480px;
+  max-width: 480px;
   margin-bottom: 40px;
 }
-.items__description .description__title {
+
+.description__title {
   color: #403f3d;
   font-size: 24px;
   line-height: 30px;
-  font-family: "Roboto", sans-serif;
 }
-.items__description .description__text {
-  font-family: "Roboto", sans-serif;
+
+.description__text {
   font-size: 16px;
   color: #403f3d;
   line-height: 24px;
   margin: 16px 0;
 }
-.items__description .description__price {
-  font-family: "Roboto", sans-serif;
+
+.description__price {
   font-size: 24px;
   color: #403f3d;
   line-height: 30px;
@@ -141,7 +229,8 @@
   display: flex;
   justify-content: center;
 }
-.slider__controls .circle {
+
+.circle {
   width: 40px;
   height: 4px;
   border-radius: 100px;
@@ -149,31 +238,34 @@
   display: inline-block;
   margin-right: 10px;
 }
-.slider__controls .circle--active {
+
+.circle--active {
   background-color: #665f55;
 }
 
 .about {
   margin-bottom: 100px;
 }
-.about .about__text {
+
+.about__text {
   font-weight: 600;
   line-height: 75px;
   font-size: 60px;
   color: #403f3d;
-  font-family: "Roboto", sans-serif;
   margin-bottom: 40px;
 }
-.about .about__text span {
+.about__text span {
   font-style: italic;
   color: #b0907a;
 }
-.about .about__gallery {
+
+.about__gallery {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 40px;
 }
-.about .about__gallery img:first-child {
+
+.gallery__column1:first-child {
   margin-bottom: 40px;
 }
 
@@ -182,26 +274,82 @@
   align-items: center;
   margin-bottom: 100px;
 }
-.application .application__offer {
-  width: 630px;
-  margin-right: 100px;
+
+.application__download {
+  margin: 0 100px 0 0;
 }
-.application h1 {
+
+.application-download__title {
   font-size: 60px;
   font-weight: 600;
   line-height: 75px;
   color: #403f3d;
 }
-.application h1 span {
+.application-download__title span {
   color: #b0907a;
 }
-.application p {
+
+.application-download__text {
   margin: 40px 0;
   color: #403f3d;
   font-size: 16px;
 }
-.application .iphone {
+
+.application-download__btn {
+  display: flex;
+}
+
+.download__btn {
+  width: 200px;
+  height: 64px;
+  border: 1px solid #665f55;
+  border-radius: 100px;
+  padding: 12px 20px;
+  transition: all 0.3s ease-in 0s;
+  background-color: #e1d4c9;
+  cursor: pointer;
+}
+.download__btn::before {
+  background-repeat: no-repeat;
+  content: "";
+  width: 36px;
+  height: 36px;
+  position: absolute;
+  top: 20%;
+  left: 20px;
+}
+
+.download-btn__apple {
   margin-right: 20px;
+  position: relative;
+}
+.download-btn__apple::before {
+  background-image: url(/src/icon/Icon.svg);
+}
+
+.download-btn__google {
+  position: relative;
+}
+.download-btn__google::before {
+  background-image: url(/src/icon/google.svg);
+}
+
+.download-btn__text {
+  padding-left: 44px;
+  text-align: left;
+}
+
+.btn__label {
+  font-size: 10px;
+  font-weight: 600;
+  line-height: 14px;
+  color: #403f3d;
+}
+
+.btn__store {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
 }
 
 .footer__container {
@@ -213,8 +361,8 @@
 }
 
 .footer__offer {
-  width: 530px;
-  margin-right: 100px;
+  max-width: 530px;
+  margin: 0 100px 0 0;
 }
 .footer__offer h1 {
   font-size: 60px;
@@ -228,8 +376,13 @@
   font-style: italic;
 }
 
-.offer__socials span {
+.offer__socials button {
+  background-color: #665f55;
+  width: 60px;
+  height: 60px;
   margin-right: 12px;
+  border: 1px solid #c1b6ad;
+  border-radius: 50%;
 }
 
 .footer__contacts h1 {
@@ -237,7 +390,7 @@
   line-height: 30px;
   font-size: 24px;
   font-weight: 600;
-  color: #e1d4c9;
+  color: #c1b6ad;
 }
 .footer__contacts p {
   color: #e1d4c9;
@@ -250,19 +403,160 @@
   margin-right: 8px;
 }
 
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  font-family: "Roboto", sans-serif;
+@media (max-width: 768px) {
+  .header__conrainer {
+    position: relative;
+    display: flex;
+    z-index: 10;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .header__burger {
+    display: block;
+    border: 1px solid #403f3d;
+    border-radius: 50%;
+    width: 44px;
+    height: 44px;
+    position: relative;
+    cursor: pointer;
+  }
+  .header__burger::before,
+  .header__burger::after {
+    border: 1px solid #403f3d;
+    border-radius: 40px;
+    width: 16px;
+    content: "";
+    position: absolute;
+    right: 12px;
+    transition: all 0.3s ease 0s;
+  }
+  .header__burger::before {
+    top: 15px;
+  }
+  .header__burger::after {
+    bottom: 15px;
+  }
+  .header__burger--active::before {
+    transform: rotate(50deg);
+    top: 20px;
+  }
+  .header__burger--active::after {
+    transform: rotate(-50deg);
+    bottom: 20px;
+  }
+  .header__sections {
+    display: none;
+  }
+  .header__menu {
+    display: none;
+  }
+  .header__content {
+    padding: 100px 100px 100px 60px;
+  }
+  .offer__btn {
+    padding: 20px 64px;
+  }
+  .offer__btn .btn__text {
+    display: block;
+    position: relative;
+    padding-right: 30px;
+  }
+  .btn__text::after {
+    content: "";
+    background-image: url(/src/icon/coffee-cup.svg);
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+  .about__gallery {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+  .about__gallery img {
+    width: 100%;
+  }
+  .img2,
+  .img3 {
+    display: none;
+  }
+  .application {
+    display: block;
+  }
+  .application__download {
+    margin: 0 0 100px 0;
+  }
+  .footer__container {
+    display: block;
+    padding: 100px 60px;
+  }
+  .footer__offer {
+    margin: 0 0 100px 0;
+  }
+  .header__menu {
+    position: absolute;
+    top: 400px;
+    right: 42%;
+  }
 }
-
-.wrapper {
-  max-width: 1440px;
-  overflow: hidden;
-  margin: 0 auto;
-  background-color: #e1d4c9;
-  padding: 20px 40px;
+@media (max-width: 500px) {
+  .wrapper {
+    padding: 20px 16px 40px 16px;
+  }
+  .header__content {
+    padding: 60px 16px;
+  }
+  .offer__title {
+    font-size: 43px;
+    line-height: 48.3px;
+  }
+  .favorite__title {
+    font-size: 32px;
+    line-height: 40px;
+  }
+  .favorite-slider__switches {
+    display: none;
+  }
+  .about__text {
+    font-size: 32px;
+    line-height: 40px;
+  }
+  .about__gallery img {
+    border-radius: 20px;
+    width: 348px;
+    height: 590px;
+    object-fit: cover;
+  }
+  .application__download {
+    margin: 0 0 40px 0;
+  }
+  .application-download__title {
+    font-size: 32px;
+    line-height: 40px;
+  }
+  .application-download__btn {
+    flex-direction: column;
+  }
+  .download-btn__apple {
+    margin-bottom: 20px;
+  }
+  .application__offer {
+    margin: 0 0 40px 0;
+  }
+  .application__screens img {
+    width: 100%;
+  }
+  .footer__container {
+    padding: 60px 16px;
+  }
+  .footer__offer {
+    margin: 0 0 40px 0;
+  }
+  .footer__offer h1 {
+    font-size: 32px;
+    line-height: 40px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -1,25 +1,22 @@
 .about {
   margin-bottom: 100px;
-
-  .about__text {
-    font-weight: 600;
-    line-height: 75px;
-    font-size: 60px;
-    color: #403f3d;
-    font-family: "Roboto", sans-serif;
-    margin-bottom: 40px;
-
-    span {
-      font-style: italic;
-      color: #b0907a;
-    }
+}
+.about__text {
+  font-weight: 600;
+  line-height: 75px;
+  font-size: 60px;
+  color: #403f3d;
+  margin-bottom: 40px;
+  span {
+    font-style: italic;
+    color: #b0907a;
   }
-  .about__gallery {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 40px;
-    img:first-child {
-      margin-bottom: 40px;
-    }
-  }
+}
+.about__gallery {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+}
+.gallery__column1:first-child {
+  margin-bottom: 40px;
 }

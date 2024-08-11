@@ -1,12 +1,8 @@
-@import "header";
-@import "content";
-@import "footer";
-
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: "Roboto", sans-serif;
+  font-family: "Inter";
 }
 .wrapper {
   max-width: 1440px;
@@ -15,3 +11,9 @@
   background-color: #e1d4c9;
   padding: 20px 40px 40px;
 }
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Forum&display=swap");
+@import "header";
+@import "content";
+@import "footer";
+@import "media";

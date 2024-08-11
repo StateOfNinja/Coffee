@@ -1,5 +1,8 @@
 .header {
   margin-bottom: 100px;
+  .header__logo {
+    z-index: 1;
+  }
 }
 .header__conrainer {
   display: flex;
@@ -11,40 +14,89 @@
   display: flex;
   list-style: none;
   a {
-    font-family: "Roboto", sans-serif;
     font-weight: 600;
     margin-right: 40px;
     color: #403f3d;
     text-decoration: none;
   }
 }
-
-.header__menu {
-  display: flex;
-  align-items: center;
+.burger__menu {
+  z-index: 1000;
+  display: none;
+  width: 100%;
+  overflow: hidden;
+  background-color: #e1d4c9;
+  transition: left 0.3s ease;
+  padding: 60px 40px 384px 40px;
+}
+.burger__menu--active {
+  left: 0;
+  display: block;
+  transition: left 0.3s ease;
+}
+.burger-menu__sections {
+  text-align: center;
+}
+.sections-list__link {
+  list-style: none;
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 40px;
+  margin-bottom: 60px;
+}
+.burger-menu__menu {
+  position: relative;
+  margin-top: 100px;
+  text-align: center;
   a {
-    font-family: "Roboto", sans-serif;
+    line-height: 40px;
+    font-size: 32px;
+    font-weight: 600;
+    color: #403f3d;
+  }
+  a::after {
+    content: url(/src/icon/coffee-cupBig.svg);
+    position: relative;
+    top: 5px;
+    left: 15px;
+    width: 40px;
+    height: 40px;
+  }
+}
+.header__menu {
+  position: relative;
+  a {
     font-weight: 600;
     text-decoration: none;
     color: #403f3d;
+    margin-right: 18px;
   }
-  img {
-    margin-left: 8px;
+  a::after {
+    content: url(/src/icon/coffee-cup.svg);
+    position: absolute;
+    height: 20px;
+    bottom: 2px;
+    margin-left: 5px;
   }
+}
+.link {
+  color: #403f3d;
+  text-decoration: none;
 }
 .header__content {
+  background-position: center;
+  background-size: cover;
+  border-radius: 40px;
   padding: 100px;
   background-image: url(/src/img/53de184b52e70f8c6142237a41f29303.jpg);
-  border-radius: 40px;
 }
-.content__offer {
-  width: 530px;
+.header-content__offer {
+  max-width: 530px;
 }
 .offer__title {
   font-size: 72px;
   line-height: 76px;
   font-weight: 600;
-  font-family: "Roboto", sans-serif;
   color: #e1d4c9;
   padding-bottom: 40px;
   span {
@@ -53,21 +105,23 @@
   }
 }
 .offer__text {
-  font-family: "Roboto", sans-serif;
   font-size: 16px;
   line-height: 24px;
   color: #e1d4c9;
   padding-bottom: 40px;
 }
-.offter__btn {
+.offer__btn {
   line-height: 24px;
   font-size: 16px;
   font-weight: 600;
-  font-family: "Roboto", sans-serif;
+  padding: 20px 78px;
   background-color: #e1d4c9;
-  min-width: 200px;
+  width: 200px;
   color: #403f3d;
   border-radius: 100px;
   height: 64px;
   border: 1px #e1d4c9 solid;
+}
+.header__burger {
+  display: none;
 }

@@ -1,0 +1,162 @@
+@media (max-width: 768px) {
+  .header__conrainer {
+    position: relative;
+    display: flex;
+    z-index: 10;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .header__burger {
+    display: block;
+    border: 1px solid #403f3d;
+    border-radius: 50%;
+    width: 44px;
+    height: 44px;
+    position: relative;
+    cursor: pointer;
+  }
+  .header__burger::before,
+  .header__burger::after {
+    border: 1px solid #403f3d;
+    border-radius: 40px;
+    width: 16px;
+    content: "";
+    position: absolute;
+    right: 12px;
+    transition: all 0.3s ease 0s;
+  }
+  .header__burger::before {
+    top: 15px;
+  }
+  .header__burger::after {
+    bottom: 15px;
+  }
+  .header__burger--active::before {
+    transform: rotate(50deg);
+    top: 20px;
+  }
+  .header__burger--active::after {
+    transform: rotate(-50deg);
+    bottom: 20px;
+  }
+  .header__sections {
+    display: none;
+  }
+  .header__menu {
+    display: none;
+  }
+  .header__content {
+    padding: 100px 100px 100px 60px;
+  }
+  .offer__btn {
+    padding: 20px 64px;
+    & .btn__text {
+      display: block;
+      position: relative;
+      padding-right: 30px;
+    }
+  }
+  .btn__text::after {
+    content: "";
+    background-image: url(/src/icon/coffee-cup.svg);
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+
+  .about__gallery {
+    grid-template-columns: 1fr;
+    gap: 0;
+    img {
+      width: 100%;
+    }
+  }
+  .img2,
+  .img3 {
+    display: none;
+  }
+  .application {
+    display: block;
+  }
+  .application__download {
+    margin: 0 0 100px 0;
+  }
+  .footer__container {
+    display: block;
+    padding: 100px 60px;
+  }
+  .footer__offer {
+    margin: 0 0 100px 0;
+  }
+  .header__menu {
+    position: absolute;
+    top: 400px;
+    right: 42%;
+  }
+}
+
+@media (max-width: 500px) {
+  .wrapper {
+    padding: 20px 16px 40px 16px;
+  }
+  .header__content {
+    padding: 60px 16px;
+  }
+  .offer__title {
+    font-size: 43px;
+    line-height: 48.3px;
+  }
+  .favorite__title {
+    font-size: 32px;
+    line-height: 40px;
+  }
+  .favorite-slider__switches {
+    display: none;
+  }
+  .about__text {
+    font-size: 32px;
+    line-height: 40px;
+  }
+  .about__gallery {
+    img {
+      border-radius: 20px;
+      width: 348px;
+      height: 590px;
+      object-fit: cover;
+    }
+  }
+  .application__download {
+    margin: 0 0 40px 0;
+  }
+  .application-download__title {
+    font-size: 32px;
+    line-height: 40px;
+  }
+
+  .application-download__btn {
+    flex-direction: column;
+  }
+  .download-btn__apple {
+    margin-bottom: 20px;
+  }
+  .application__offer {
+    margin: 0 0 40px 0;
+  }
+  .application__screens {
+    img {
+      width: 100%;
+    }
+  }
+  .footer__container {
+    padding: 60px 16px;
+  }
+  .footer__offer {
+    margin: 0 0 40px 0;
+    h1 {
+      font-size: 32px;
+      line-height: 40px;
+    }
+  }
+}

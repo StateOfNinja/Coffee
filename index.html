@@ -11,25 +11,49 @@
       <header class="header">
         <div class="header__conrainer">
           <div class="header__logo">
-            <img src="./src/img/logo.png" alt="" />
+            <img src="./src/icon/logo.svg" alt="" />
           </div>
+
           <nav class="header__sections">
             <ul class="sections__list">
               <li class="sections__link">
-                <a href="#About">Favorite coffee</a>
+                <a href="#Favorite coffee">Favorite coffee</a>
               </li>
               <li class="sections__link"><a href="#About">About</a></li>
-              <li class="sections__link"><a href="#About">Mobile app</a></li>
-              <li class="sections__link"><a href="#About">Contact us</a></li>
+              <li class="sections__link">
+                <a href="#Mobile app">Mobile app</a>
+              </li>
+              <li class="sections__link">
+                <a href="#Contact us">Contact us</a>
+              </li>
             </ul>
           </nav>
-          <div class="header__menu">
-            <a href="#Menu">Menu </a>
-            <i><img src="./src/icon/coffee-cup.png" alt="" /></i>
+          <div class="header__menu"><a href="Menu">Menu</a></div>
+          <div class="header__burger"></div>
+        </div>
+        <div class="burger__menu">
+          <nav class="burger-menu__sections">
+            <ul class="menu-sections__list">
+              <li class="sections-list__link">
+                <a class="link" href="#Favorite coffee">Favorite coffee</a>
+              </li>
+              <li class="sections-list__link">
+                <a class="link" href="#About">About</a>
+              </li>
+              <li class="sections-list__link">
+                <a class="link" href="#Mobile app">Mobile app</a>
+              </li>
+              <li class="sections-list__link">
+                <a class="link" href="#Contact us">Contact us</a>
+              </li>
+            </ul>
+          </nav>
+          <div class="burger-menu__menu">
+            <a class="link" href="#Menu">Menu</a>
           </div>
         </div>
         <div class="header__content">
-          <div class="content__offer">
+          <div class="header-content__offer">
             <div class="offer__title">
               <span>Enjoy</span> premium coffee at our charming cafe
             </div>
@@ -39,32 +63,33 @@
               and those seeking a warm and inviting space to enjoy their
               favorite beverage.
             </div>
-            <button class="offter__btn">Menu</button>
+            <button class="offer__btn">
+              <div class="btn__text">Menu</div>
+            </button>
           </div>
         </div>
       </header>
       <main class="main">
         <section class="favorite">
-          <div class="favorite__slider">
+          <div class="favorite__title">
             Choose your <span>favorite</span> coffee
           </div>
           <div class="favorite__slider">
-            <div class="slider__switches">
-              <img
-                class="prev"
-                src="./src/icon/button-icon-dark (1).png"
-                alt=""
-              />
-              <img class="next" src="./src/icon/button-icon-dark.png" alt="" />
+            <div class="favorite-slider__switches">
+              <button class="slider-switches__btn switches-btn__prev">
+                <img class="prev" src="./src/icon/arrow-left.svg" alt="" />
+              </button>
+              <button class="slider-switches__btn switches-btn__next">
+                <img class="next" src="./src/icon/arrow-right.svg" alt="" />
+              </button>
             </div>
-            <div class="slider__items">
+            <div class="favorite-slider__items">
               <img
                 class="slider__item"
                 src="./src/img/57d082ae9774ffeb8a409a788e05fef3.png"
                 alt=""
               />
-
-              <div class="items__description">
+              <div class="slider-item__description">
                 <h4 class="description__title">S’mores Frappuccino</h4>
                 <p class="description__text">
                   This new drink takes an espresso and mixes it with brown sugar
@@ -88,36 +113,38 @@
           </div>
           <div class="about__gallery">
             <div class="gallery__column1">
-              <span class="img1"><img src="./src/img/box.png" alt="" /></span>
-              <span class="img2"
-                ><img src="./src/img/box (1).png" alt=""
-              /></span>
+              <img class="img1" src="./src/img/box.png" alt="" />
+              <img class="img2" src="./src/img/box (1).png" alt="" />
             </div>
             <div class="gallery__column2">
-              <span class="img3"
-                ><img src="./src/img/box (2).png" alt=""
-              /></span>
-              <span class="img4"
-                ><img src="./src/img/box (3).png" alt=""
-              /></span>
+              <img class="img3" src="./src/img/box (2).png" alt="" />
+              <img class="img4" src="./src/img/box (3).png" alt="" />
             </div>
           </div>
         </section>
         <section class="application">
-          <div class="application__offer">
-            <h1><span>Download</span> our apps to start ordering</h1>
-            <p>
+          <div class="application__download">
+            <h1 class="application-download__title">
+              <span>Download</span> our apps to start ordering
+            </h1>
+            <p class="application-download__text">
               Download the Resource app today and experience the comfort of
               ordering your favorite coffee from wherever you are
             </p>
-
-            <img class="iphone" src="./src/icon/button-app-store.png" alt="" />
-
-            <img
-              class="android"
-              src="./src/icon/button-google-play.png"
-              alt=""
-            />
+            <div class="application-download__btn">
+              <button class="download__btn download-btn__apple">
+                <div class="download-btn__text">
+                  <p class="btn__label">Available on the</p>
+                  <p class="btn__store">App Store</p>
+                </div>
+              </button>
+              <button class="download__btn download-btn__google">
+                <div class="download-btn__text">
+                  <p class="btn__label">Available on</p>
+                  <p class="btn__store">Google Play</p>
+                </div>
+              </button>
+            </div>
           </div>
           <div class="application__screens">
             <img src="./src/img/mobile-screens.png" alt="" />
@@ -129,25 +156,23 @@
           <div class="footer__offer">
             <h1>Sip, Savor, Smile. <span>It’s coffee time!</span></h1>
             <div class="offer__socials">
-              <span><img src="./src/icon/button-icon-light.png" alt="" /></span
-              ><span
-                ><img src="./src/icon/button-icon-light (1).png" alt="" /></span
-              ><span
-                ><img src="./src/icon/button-icon-light (2).png" alt=""
-              /></span>
+              <button><img src="./src/icon/twitter.svg" alt="" /></button
+              ><button><img src="./src/icon/instagram.svg" alt="" /></button
+              ><button><img src="./src/icon/facebook.svg" alt="" /></button>
             </div>
           </div>
           <div class="footer__contacts">
             <h1>Contact us</h1>
-            <p><img src="./src/icon/pin-alt.png" alt="" />8558 Green Rd., LA</p>
-            <p><img src="./src/icon/phone.png" alt="" />+1 (603) 555-0123</p>
+            <p><img src="./src/icon/pin-alt.svg" alt="" />8558 Green Rd., LA</p>
+            <p><img src="./src/icon/phone.svg" alt="" />+1 (603) 555-0123</p>
             <p>
-              <img src="./src/icon/clock.png" alt="" />Mon-Sat: 9:00 AM – 23:00
+              <img src="./src/icon/clock.svg" alt="" />Mon-Sat: 9:00 AM – 23:00
               PM
             </p>
           </div>
         </div>
       </footer>
     </div>
+    <script type="" src="./js/script.js"></script>
   </body>
 </html>

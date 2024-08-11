@@ -6,8 +6,8 @@
   align-items: center;
 }
 .footer__offer {
-  width: 530px;
-  margin-right: 100px;
+  max-width: 530px;
+  margin: 0 100px 0 0;
   h1 {
     font-size: 60px;
     line-height: 75px;
@@ -21,8 +21,13 @@
   }
 }
 .offer__socials {
-  span {
+  button {
+    background-color: #665f55;
+    width: 60px;
+    height: 60px;
     margin-right: 12px;
+    border: 1px solid #c1b6ad;
+    border-radius: 50%;
   }
 }
 .footer__contacts {
@@ -31,7 +36,7 @@
     line-height: 30px;
     font-size: 24px;
     font-weight: 600;
-    color: #e1d4c9;
+    color: #c1b6ad;
   }
   p {
     color: #e1d4c9;

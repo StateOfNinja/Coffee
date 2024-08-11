@@ -3,69 +3,72 @@
   position: relative;
   margin-bottom: 100px;
 }
-.favorite__slider {
+.favorite__title {
   font-size: 60px;
   line-height: 75px;
   font-weight: 600;
-  font-family: "Roboto", sans-serif;
+  margin-bottom: 40px;
   color: #403f3d;
   span {
     color: #b0907a;
   }
-  .slider__item {
-    width: 480px;
-    height: 480px;
-  }
 }
-.slider__switches {
-  .prev,
-  .next {
-    top: 40%;
-    position: absolute;
-  }
-  .prev {
-    left: 0;
-  }
-  .next {
-    right: 0;
-  }
+
+.slider__item {
+  max-width: 480px;
 }
-.items__description {
+.slider-switches__btn {
+  padding: 18px;
+  background-color: #e1d4c9;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  outline: none;
+  border: 1px solid #403f3d;
+  cursor: pointer;
+  top: 50%;
+  position: absolute;
+}
+.switches-btn__prev {
+  left: 0;
+}
+.switches-btn__next {
+  right: 0;
+}
+
+.slider-item__description {
   margin: 0 auto;
-  width: 480px;
+  max-width: 480px;
   margin-bottom: 40px;
-  .description__title {
-    color: #403f3d;
-    font-size: 24px;
-    line-height: 30px;
-    font-family: "Roboto", sans-serif;
-  }
-  .description__text {
-    font-family: "Roboto", sans-serif;
-    font-size: 16px;
-    color: #403f3d;
-    line-height: 24px;
-    margin: 16px 0;
-  }
-  .description__price {
-    font-family: "Roboto", sans-serif;
-    font-size: 24px;
-    color: #403f3d;
-    line-height: 30px;
-  }
+}
+.description__title {
+  color: #403f3d;
+  font-size: 24px;
+  line-height: 30px;
+}
+.description__text {
+  font-size: 16px;
+  color: #403f3d;
+  line-height: 24px;
+  margin: 16px 0;
+}
+.description__price {
+  font-size: 24px;
+  color: #403f3d;
+  line-height: 30px;
 }
 .slider__controls {
   display: flex;
   justify-content: center;
-  .circle {
-    width: 40px;
-    height: 4px;
-    border-radius: 100px;
-    background-color: #c1b6ad;
-    display: inline-block;
-    margin-right: 10px;
-  }
-  .circle--active {
-    background-color: #665f55;
-  }
+}
+.circle {
+  width: 40px;
+  height: 4px;
+  border-radius: 100px;
+  background-color: #c1b6ad;
+  display: inline-block;
+  margin-right: 10px;
+}
+.circle--active {
+  background-color: #665f55;
 }
