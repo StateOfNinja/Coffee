@@ -17,6 +17,7 @@
   grid-template-columns: repeat(2, 1fr);
   gap: 40px;
 }
-.gallery__column1:first-child {
-  margin-bottom: 40px;
+.gallery__column1 img:first-of-type,
+.gallery__column2 img:first-of-type {
+  margin: 0 0 40px 0;
 }
